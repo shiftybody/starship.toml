@@ -1,0 +1,108 @@
+#format = "all"
+
+# format = """
+# $username\
+# $hostname\
+# $localip\
+# $shlvl\
+# $singularity\
+# $kubernetes\
+# $directory\
+# $vcsh\
+# $git_branch\
+# $git_commit\
+# $git_state\
+# $git_metrics\
+# $git_status\
+# $hg_branch\
+# $docker_context\
+# $package\
+# $c\
+# $cmake\
+# $cobol\
+# $daml\
+# $dart\
+# $deno\
+# $dotnet\
+# $elixir\
+# $elm\
+# $erlang\
+# $golang\
+# $haskell\
+# $helm\
+# $java\
+# $julia\
+# $kotlin\
+# $lua\
+# $nim\
+# $nodejs\
+# $ocaml\
+# $perl\
+# $php\
+# $pulumi\
+# $purescript\
+# $python\
+# $raku\
+# $rlang\
+# $red\
+# $ruby\
+# $rust\
+# $scala\
+# $swift\
+# $terraform\
+# $vlang\
+# $vagrant\
+# $zig\
+# $buf\
+# $nix_shellformat="$all$directory$character"
+# $conda\
+# $spack\
+# $memory_usage\
+# $aws\
+# $gcloud\
+# $openstack\
+# $azure\
+# $env_var\
+# $crystal\
+# $custom\
+# $sudo\
+# $cmd_duration\
+# $line_break\
+# $jobs\
+# $battery\
+# $time\
+# $status\
+# $container\
+# $shell\
+# $character"""
+
+format = "$all"
+
+add_newline = false
+
+[username]
+style_user = "bold #56b6c2"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+
+[hostname]
+ssh_only = false
+format = "on [$hostname](#c678dd) "
+trim_at = ".companyname.com"
+disabled = false
+
+
+[directory]
+style = "bold #98c379"
+truncation_length = 8
+truncation_symbol = "…/"
+read_only = " 🔒"
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[➜](bold red) "
+vicmd_symbol = "[[➜](bold blue) "
+
