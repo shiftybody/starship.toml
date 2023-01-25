@@ -81,7 +81,7 @@ format = "$all"
 add_newline = false
 
 [username]
-style_user = "bold #56b6c2"
+style_user = "#56b6c2"
 style_root = "black bold"
 format = "[$user]($style) "
 disabled = false
